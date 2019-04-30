@@ -37,7 +37,8 @@ router.post("/", function(req, res, next) {
     title: req.body.title,
     price: req.body.price,
     releaseYear: req.body.releaseYear,
-    active: req.body.active
+    active: req.body.active,
+    storeId: req.body.storeId
   })
   .then(game => {
     res.setHeader("Content-Type", "application/json");
@@ -53,7 +54,7 @@ router.post("/", function(req, res, next) {
 router .put("/.id", function (req, res, next) {
   Game.update(
     {
-      title. req.body.title,
+      title: req.body.title,
       price: req.body.price,
       releaseYear: req.body.releaseYear,
       active: req.body.active
